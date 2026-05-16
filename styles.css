@@ -111,6 +111,11 @@ body {
   align-items: center;
   height: 100%;
   margin-left: 24px;
+  flex: 1;
+}
+
+.ktui-nav-spacer {
+  flex: 1;
 }
 
 .ktui-nav-link {
@@ -402,7 +407,11 @@ code {
   letter-spacing: 0;
   color: var(--ktui-text-secondary);
   max-width: 640px;
-  margin: 0;
+  margin: 0 0 16px;
+}
+
+.ktui-prose:last-child {
+  margin-bottom: 0;
 }
 
 .ktui-prose strong {
