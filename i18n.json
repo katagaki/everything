@@ -1,0 +1,310 @@
+{
+  "brand.name":{
+    "en":"katagaki",
+    "ja":"シン"
+  },
+  "nav.apps":{
+    "en":"Apps",
+    "ja":"アプリ"
+  },
+  "nav.others":{
+    "en":"Others",
+    "ja":"その他"
+  },
+  "nav.support":{
+    "en":"Support",
+    "ja":"サポート"
+  },
+  "nav.privacy":{
+    "en":"Privacy",
+    "ja":"プライバシー"
+  },
+  "page.apps.title":{
+    "en":"katagaki's Homepage",
+    "ja":"シンのホームページ"
+  },
+  "page.apps.heading":{
+    "en":"Apps",
+    "ja":"アプリ"
+  },
+  "page.apps.archived":{
+    "en":"Archived",
+    "ja":"アーカイブ済み"
+  },
+  "page.others.title":{
+    "en":"Others",
+    "ja":"その他"
+  },
+  "page.others.heading":{
+    "en":"Others",
+    "ja":"その他"
+  },
+  "page.support.title":{
+    "en":"Support",
+    "ja":"サポート"
+  },
+  "page.support.heading":{
+    "en":"Support",
+    "ja":"サポート"
+  },
+  "page.support.intro":{
+    "en":"For help with any of the apps, open a new issue in the corresponding GitHub repository. Use the <strong>Issues</strong> tab to file a bug report, request a feature, or ask a question.",
+    "ja":"アプリのサポートが必要な場合、該当するGitHubリポジトリでIssueを作成してください。<strong>Issues</strong> タブからバグ報告・機能要望・お問い合わせなどができます。"
+  },
+  "page.support.header.app":{
+    "en":"App",
+    "ja":"アプリ"
+  },
+  "page.support.header.issues":{
+    "en":"Issue Tracker",
+    "ja":"Issue トラッカー"
+  },
+  "page.privacy.title":{
+    "en":"Privacy Policy",
+    "ja":"プライバシーポリシー"
+  },
+  "page.privacy.heading":{
+    "en":"Privacy Policy",
+    "ja":"プライバシーポリシー"
+  },
+  "page.privacy.section.data_collection":{
+    "en":"Data Collection",
+    "ja":"データ収集"
+  },
+  "page.privacy.section.third_party":{
+    "en":"Third-Party Services",
+    "ja":"サードパーティサービス"
+  },
+  "page.privacy.section.changes":{
+    "en":"Changes to This Policy",
+    "ja":"ポリシーの変更"
+  },
+  "page.privacy.section.contact":{
+    "en":"Contact",
+    "ja":"お問い合わせ"
+  },
+  "tag.coming_soon":{
+    "en":"Coming Soon",
+    "ja":"近日公開"
+  },
+  "tag.in_development":{
+    "en":"In Development",
+    "ja":"開発中"
+  },
+  "app.circles_ios.name":{
+    "en":"CiRCLES for iOS",
+    "ja":"CiRCLES（iOS版）"
+  },
+  "app.circles_ios.desc":{
+    "en":"Comic Market (Comiket) map, catalog, shopping list",
+    "ja":"コミケWebCatalog対応のマップ、カタログ、宝物リスト"
+  },
+  "app.circles_android.name":{
+    "en":"CiRCLES for Android",
+    "ja":"CiRCLES（Android版）"
+  },
+  "app.circles_android.desc":{
+    "en":"Comic Market (Comiket) map, catalog, shopping list",
+    "ja":"コミケWebCatalog対応のマップ、カタログ、宝物リスト"
+  },
+  "app.kamicut.name":{
+    "en":"Kamicut",
+    "ja":"カミカット"
+  },
+  "app.kamicut.desc":{
+    "en":"Circle cut maker for dojin events",
+    "ja":"同人イベント向けサークルカット作成アプリ"
+  },
+  "app.kamicash.name":{
+    "en":"Kamicash",
+    "ja":"カミレジ"
+  },
+  "app.kamicash.desc":{
+    "en":"Cash register for dojin events",
+    "ja":"同人イベント向けレジアプリ"
+  },
+  "app.djdx.name":{
+    "en":"DJDX",
+    "ja":"DJDX"
+  },
+  "app.djdx.desc":{
+    "en":"beatmania IIDX score viewer with CSV import and analytics",
+    "ja":"beatmania IIDXのスコアビューワー（CSVインポート・アナリティクス機能付き）"
+  },
+  "app.picmate.name":{
+    "en":"PicMate",
+    "ja":"ピックメイト"
+  },
+  "app.picmate.desc":{
+    "en":"Secondary photo/image collection with share extension",
+    "ja":"共有拡張機能対応の二次画像コレクション"
+  },
+  "app.bromides.name":{
+    "en":"Bromides",
+    "ja":"ブロマイド"
+  },
+  "app.bromides.desc":{
+    "en":"Share extension for quickly saving photos to albums",
+    "ja":"写真をアルバムへ素早く保存する共有拡張機能"
+  },
+  "app.sortnao.name":{
+    "en":"SortNAO",
+    "ja":"SortNAO"
+  },
+  "app.sortnao.desc":{
+    "en":"SauceNAO illustration sorter",
+    "ja":"SauceNAO対応イラスト振り分けツール"
+  },
+  "app.reeled.name":{
+    "en":"Reeled",
+    "ja":"Reeled"
+  },
+  "app.reeled.desc":{
+    "en":"VHS filter for photos and videos",
+    "ja":"VHSフィルターツール"
+  },
+  "app.melodee.name":{
+    "en":"Melodee",
+    "ja":"メロディー"
+  },
+  "app.melodee.desc":{
+    "en":"Audio player focused on file and folder management",
+    "ja":"ファイル・フォルダ管理に特化したオーディオプレーヤー"
+  },
+  "app.tunetag.name":{
+    "en":"Tunetag",
+    "ja":"テューンタグ"
+  },
+  "app.tunetag.desc":{
+    "en":"Audio file tag editor with support for inter-app drag and drop",
+    "ja":"アプリ間ドラッグ＆ドロップ対応の音声ファイルタグエディター"
+  },
+  "app.sakura.name":{
+    "en":"Sakura",
+    "ja":"サクラリーダー"
+  },
+  "app.sakura.desc":{
+    "en":"Social media style RSS reader with video and podcast support",
+    "ja":"SNSスタイルRSSリーダー（動画・ポッドキャスト対応）"
+  },
+  "app.hackers.name":{
+    "en":"Hackers",
+    "ja":"ハッカーズ"
+  },
+  "app.hackers.desc":{
+    "en":"Hacker News client for Japanese readers",
+    "ja":"日本人読者向けHacker Newsクライアント"
+  },
+  "app.working_hour.name":{
+    "en":"Working Hour",
+    "ja":"Working Hour"
+  },
+  "app.working_hour.desc":{
+    "en":"Simple timesheet app",
+    "ja":"タイムシート"
+  },
+  "app.randomly.name":{
+    "en":"Randomly",
+    "ja":"ランダムリー"
+  },
+  "app.randomly.desc":{
+    "en":"App that generates several types of random data",
+    "ja":"さまざまなランダムデータを生成するアプリ"
+  },
+  "app.diceydice.name":{
+    "en":"DiceyDice",
+    "ja":"サイコーロ"
+  },
+  "app.diceydice.desc":{
+    "en":"Simple app that rolls some dice",
+    "ja":"サイコロを振るアプリ"
+  },
+  "app.unagent.name":{
+    "en":"Unagent",
+    "ja":"Unagent"
+  },
+  "app.unagent.desc":{
+    "en":"Safari extension that changes the user agent",
+    "ja":"User-Agentを変更するSafari拡張機能"
+  },
+  "app.conductor.name":{
+    "en":"Conductor",
+    "ja":"Conductor"
+  },
+  "app.conductor.desc":{
+    "en":"Xcode Cloud build management app",
+    "ja":"Xcode Cloudビルド管理アプリ"
+  },
+  "app.buses.name":{
+    "en":"Buses",
+    "ja":"バス"
+  },
+  "app.buses.desc":{
+    "en":"App for Singapore's public bus services",
+    "ja":"シンガポール公共バスのダイア確認アプリ"
+  },
+  "app.tap_to_scan.name":{
+    "en":"Tap to Scan",
+    "ja":"タッチスキャン"
+  },
+  "app.tap_to_scan.desc":{
+    "en":"Easily accessible barcode scanner",
+    "ja":"簡単にアクセスできるバーコードスキャナー"
+  },
+  "app.picsave.name":{
+    "en":"PicSave",
+    "ja":"PicSave"
+  },
+  "app.picsave.desc":{
+    "en":"Pixiv bookmark manager app with tag search",
+    "ja":"タグ検索対応のpixivブックマーク管理アプリ"
+  },
+  "app.meloan.name":{
+    "en":"Meloan",
+    "ja":"メローン"
+  },
+  "app.meloan.desc":{
+    "en":"Receipt-based IOU tracker with iCloud sync",
+    "ja":"iCloud同期対応のレシートベース貸借管理"
+  },
+  "app.quickup.name":{
+    "en":"QuickUp",
+    "ja":"QuickUp"
+  },
+  "app.quickup.desc":{
+    "en":"macOS client for ClickUp based on the ClickUp public API",
+    "ja":"ClickUp公式APIを使ったクライアント"
+  },
+  "app.guru.name":{
+    "en":"Guru",
+    "ja":"Guru"
+  },
+  "app.guru.desc":{
+    "en":"Password manager with a unique take on password generation",
+    "ja":"独自のパスワード生成方式を採用したパスワードマネージャー"
+  },
+  "others.blue_archive_macos.name":{
+    "en":"Blue Archive for macOS",
+    "ja":"macOS版ブルアカ"
+  },
+  "others.blue_archive_macos.desc":{
+    "en":"Resources requires to run Blue Archive on a Mac",
+    "ja":"Macでブルーアーカイブを動かすために必要なリソース"
+  },
+  "others.rhythm_icons.name":{
+    "en":"RhythMap Icons",
+    "ja":"リズマップのアイコン"
+  },
+  "others.rhythm_icons.desc":{
+    "en":"Game icons for the RhythMap app",
+    "ja":"リズマップ内に表示される各ゲームのアイコン"
+  },
+  "others.gists.name":{
+    "en":"Gists",
+    "ja":"Gists"
+  },
+  "others.gists.desc":{
+    "en":"Scripts, code snippets, and more",
+    "ja":"スクリプト、コードスニペットなど"
+  }
+}
