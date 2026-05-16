@@ -17,7 +17,7 @@
   },
   "nav.privacy": {
     "en": "Privacy",
-    "ja": "プライバシー"
+    "ja": "プライバシー（英語）"
   },
   "page.apps.title": {
     "en": "katagaki's Homepage",
@@ -66,22 +66,6 @@
   "page.privacy.heading": {
     "en": "Privacy Policy",
     "ja": "プライバシーポリシー"
-  },
-  "page.privacy.section.data_collection": {
-    "en": "Data Collection",
-    "ja": "データ収集"
-  },
-  "page.privacy.section.third_party": {
-    "en": "Third-Party Services",
-    "ja": "サードパーティサービス"
-  },
-  "page.privacy.section.changes": {
-    "en": "Changes to This Policy",
-    "ja": "ポリシーの変更"
-  },
-  "page.privacy.section.contact": {
-    "en": "Contact",
-    "ja": "お問い合わせ"
   },
   "tag.coming_soon": {
     "en": "Coming Soon",
