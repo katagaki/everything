@@ -1,3 +1,5 @@
+import { applyTranslations } from "./i18n.js";
+
 try {
   const res = await fetch(new URL("nav.html", import.meta.url));
   const html = await res.text();
@@ -9,7 +11,9 @@ try {
     a.href = new URL(a.getAttribute("href"), base).href;
   });
 
+  const nav = template.content.firstElementChild;
   document.body.prepend(template.content);
+  applyTranslations(nav);
 } catch (e) {
   console.warn("nav load failed", e);
 }
