@@ -150,6 +150,36 @@ body {
   outline-offset: -2px;
 }
 
+.ktui-nav-link::before {
+  content: "";
+  display: none;
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+  -webkit-mask: no-repeat center / contain;
+  mask: no-repeat center / contain;
+}
+
+.ktui-nav-link[data-icon="apps"]::before {
+  -webkit-mask-image: url("img/ui/apps.svg");
+  mask-image: url("img/ui/apps.svg");
+}
+
+.ktui-nav-link[data-icon="others"]::before {
+  -webkit-mask-image: url("img/ui/others.svg");
+  mask-image: url("img/ui/others.svg");
+}
+
+.ktui-nav-link[data-icon="support"]::before {
+  -webkit-mask-image: url("img/ui/support.svg");
+  mask-image: url("img/ui/support.svg");
+}
+
+.ktui-nav-link[data-icon="privacy"]::before {
+  -webkit-mask-image: url("img/ui/privacy.svg");
+  mask-image: url("img/ui/privacy.svg");
+}
+
 .ktui-shell {
   max-width: 1056px;
   margin: 0 auto;
@@ -472,5 +502,15 @@ a:hover .ktui-appstore-badge {
   }
   .ktui-shell {
     padding: 32px 16px 64px;
+  }
+  .ktui-header-brand {
+    display: none;
+  }
+  .ktui-nav-link {
+    font-size: 0;
+    padding: 0 12px;
+  }
+  .ktui-nav-link::before {
+    display: inline-block;
   }
 }
