@@ -297,6 +297,12 @@ img {
   display: inline-block;
 }
 
+@media (prefers-color-scheme: dark) {
+  img[src*="img/ui/"] {
+    filter: invert(1);
+  }
+}
+
 a {
   color: var(--ktui-link-primary);
   text-decoration: none;
