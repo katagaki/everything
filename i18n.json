@@ -87,6 +87,10 @@
     "en": "In Development",
     "ja": "開発中"
   },
+  "tag.join_beta": {
+    "en": "Join Beta",
+    "ja": "ベータ版に参加"
+  },
   "app.circles_ios.name": {
     "en": "CiRCLES for iOS",
     "ja": "CiRCLES（iOS版）"
