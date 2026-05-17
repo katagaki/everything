@@ -36,8 +36,20 @@
     "ja": "その他"
   },
   "page.others.heading": {
-    "en": "Others",
+    "en": "Other Contributions",
     "ja": "その他"
+  },
+  "page.others.personal": {
+    "en": "Personal Projects",
+    "ja": "個人プロジェクト"
+  },
+  "page.others.contributions.apps": {
+    "en": "iOS App Contributions",
+    "ja": "他社iOSアプリ"
+  },
+  "page.others.contributions.other": {
+    "en": "Other Contributions",
+    "ja": "その他の貢献"
   },
   "page.support.title": {
     "en": "Support",
@@ -49,7 +61,7 @@
   },
   "page.support.intro": {
     "en": "For help with any of the apps, open a new issue in the corresponding GitHub repository. Use the <strong>Issues</strong> tab to file a bug report, request a feature, or ask a question.",
-    "ja": "アプリのサポートが必要な場合、該当するGitHubリポジトリでIssueを作成してください。<strong>Issues</strong> タブからバグ報告・機能要望・お問い合わせなどができます。"
+    "ja": "アプリのサポートが必要な場合、該当するGitHubリポジトリでIssueを作成してください。<strong>Issues</strong>タブからバグ報告・機能要望・お問い合わせなどができます。"
   },
   "page.support.header.app": {
     "en": "App",
@@ -282,6 +294,110 @@
   "others.rhythm_icons.desc": {
     "en": "Game icons for the RhythMap app",
     "ja": "リズマップ内に表示される各ゲームのアイコン"
+  },
+  "others.songlinkr.name": {
+    "en": "SongLinkr",
+    "ja": "SongLinkr"
+  },
+  "others.songlinkr.desc": {
+    "en": "Provided Japanese localization",
+    "ja": "日本語ローカライズを担当"
+  },
+  "others.top_sticker_maker.name": {
+    "en": "Top Sticker Maker",
+    "ja": "Top Sticker Maker"
+  },
+  "others.top_sticker_maker.desc": {
+    "en": "Provided Japanese localization",
+    "ja": "日本語ローカライズを担当"
+  },
+  "others.subsee.name": {
+    "en": "Subsee",
+    "ja": "Subsee"
+  },
+  "others.subsee.desc": {
+    "en": "Provided Japanese localization",
+    "ja": "日本語ローカライズを担当"
+  },
+  "others.a_repeatable_list.name": {
+    "en": "A Repeatable List",
+    "ja": "A Repeatable List"
+  },
+  "others.a_repeatable_list.desc": {
+    "en": "Provided Japanese localization",
+    "ja": "日本語ローカライズを担当"
+  },
+  "others.clean_share.name": {
+    "en": "Clean Share",
+    "ja": "Clean Share"
+  },
+  "others.clean_share.desc": {
+    "en": "Provided Japanese localization",
+    "ja": "日本語ローカライズを担当"
+  },
+  "others.decisly.name": {
+    "en": "Decisly",
+    "ja": "Decisly"
+  },
+  "others.decisly.desc": {
+    "en": "Provided Japanese localization",
+    "ja": "日本語ローカライズを担当"
+  },
+  "others.devmate.name": {
+    "en": "DevMate",
+    "ja": "DevMate"
+  },
+  "others.devmate.desc": {
+    "en": "Provided Japanese localization",
+    "ja": "日本語ローカライズを担当"
+  },
+  "others.fix_contrast.name": {
+    "en": "Fix Contrast",
+    "ja": "Fix Contrast"
+  },
+  "others.fix_contrast.desc": {
+    "en": "Provided Japanese localization",
+    "ja": "日本語ローカライズを担当"
+  },
+  "others.hidgets.name": {
+    "en": "Hidgets",
+    "ja": "Hidgets"
+  },
+  "others.hidgets.desc": {
+    "en": "Provided Japanese localization",
+    "ja": "日本語ローカライズを担当"
+  },
+  "others.mimestream.name": {
+    "en": "Mimestream",
+    "ja": "Mimestream"
+  },
+  "others.mimestream.desc": {
+    "en": "Provided Japanese localization",
+    "ja": "日本語ローカライズを担当"
+  },
+  "others.moca.name": {
+    "en": "Moca",
+    "ja": "Moca"
+  },
+  "others.moca.desc": {
+    "en": "Provided Japanese localization",
+    "ja": "日本語ローカライズを担当"
+  },
+  "others.parcel.name": {
+    "en": "Parcel",
+    "ja": "Parcel"
+  },
+  "others.parcel.desc": {
+    "en": "Provided Japanese localization",
+    "ja": "日本語ローカライズを担当"
+  },
+  "others.pharos_pro.name": {
+    "en": "Pharos Pro",
+    "ja": "Pharos Pro"
+  },
+  "others.pharos_pro.desc": {
+    "en": "Provided Japanese localization",
+    "ja": "日本語ローカライズを担当"
   },
   "others.gists.name": {
     "en": "Gists",
