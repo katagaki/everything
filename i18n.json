@@ -27,6 +27,18 @@
     "en": "Apps",
     "ja": "アプリ"
   },
+  "page.apps.multimedia": {
+    "en": "Multimedia Apps",
+    "ja": "メディア関連アプリ"
+  },
+  "page.apps.others": {
+    "en": "Other Apps",
+    "ja": "その他のアプリ"
+  },
+  "page.apps.circles": {
+    "en": "Apps for Circles",
+    "ja": "サークル支援アプリ"
+  },
   "page.apps.archived": {
     "en": "Archived",
     "ja": "アーカイブ済み"
