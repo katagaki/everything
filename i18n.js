@@ -1,5 +1,5 @@
 const userLang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
-const lang = userLang.startsWith("ja") ? "ja" : "en";
+export const lang = userLang.startsWith("ja") ? "ja" : "en";
 document.documentElement.lang = lang;
 
 let translations = {};

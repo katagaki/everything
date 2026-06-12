@@ -120,5 +120,19 @@
 
 </main>
 
+<script type="module">
+  import { lang } from "../i18n.js";
+  const tbody = document.querySelector(".ktui-table-wrapper tbody");
+  if (tbody) {
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+    rows.sort((a, b) => {
+      const na = a.querySelector("td strong")?.textContent.trim() ?? "";
+      const nb = b.querySelector("td strong")?.textContent.trim() ?? "";
+      return na.localeCompare(nb, lang);
+    });
+    rows.forEach((row) => tbody.appendChild(row));
+  }
+</script>
+
 </body>
 </html>

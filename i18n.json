@@ -60,8 +60,8 @@
     "ja": "サポート"
   },
   "page.support.intro": {
-    "en": "For help with any of the apps, use the <strong>Support URL</strong> listed below. For most apps this opens a new issue in the corresponding GitHub repository where you can file a bug report, request a feature, or ask a question. Some apps instead link to a support form — just follow the listed link.",
-    "ja": "アプリのサポートが必要な場合、下記の<strong>サポートURL</strong>をご利用ください。多くのアプリでは該当するGitHubリポジトリのIssueが開き、バグ報告・機能要望・お問い合わせなどができます。一部のアプリではサポートフォームへのリンクになっていますので、記載のリンクからお進みください。"
+    "en": "For help with any of the apps, use the <strong>Support URL</strong> listed below. For most apps this opens a new issue in the corresponding GitHub repository where you can file a bug report, request a feature, or ask a question. Some apps instead link to a feedback form — just follow the listed link.",
+    "ja": "アプリのサポートが必要な場合、下記の<strong>サポートURL</strong>をご利用ください。多くのアプリでは該当するGitHubリポジトリのIssueが開き、バグ報告・機能要望・お問い合わせなどができます。一部のアプリではフィードバックフォームへのリンクになっていますので、記載のリンクからお進みください。"
   },
   "page.support.header.app": {
     "en": "App",
