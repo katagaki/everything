@@ -115,11 +115,11 @@
     "en": "Circle cut maker for dojin events",
     "ja": "同人イベント向けサークルカット作成アプリ"
   },
-  "app.kamicash.name": {
-    "en": "Kamicash",
+  "app.kamiregi.name": {
+    "en": "Kamiregi",
     "ja": "カミレジ"
   },
-  "app.kamicash.desc": {
+  "app.kamiregi.desc": {
     "en": "Cash register for dojin events",
     "ja": "同人イベント向けレジアプリ"
   },
