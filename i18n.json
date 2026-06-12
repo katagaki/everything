@@ -60,16 +60,16 @@
     "ja": "サポート"
   },
   "page.support.intro": {
-    "en": "For help with any of the apps, open a new issue in the corresponding GitHub repository. Use the <strong>Issues</strong> tab to file a bug report, request a feature, or ask a question.",
-    "ja": "アプリのサポートが必要な場合、該当するGitHubリポジトリでIssueを作成してください。<strong>Issues</strong>タブからバグ報告・機能要望・お問い合わせなどができます。"
+    "en": "For help with any of the apps, use the <strong>Support URL</strong> listed below. For most apps this opens a new issue in the corresponding GitHub repository where you can file a bug report, request a feature, or ask a question. Some apps instead link to a support form — just follow the listed link.",
+    "ja": "アプリのサポートが必要な場合、下記の<strong>サポートURL</strong>をご利用ください。多くのアプリでは該当するGitHubリポジトリのIssueが開き、バグ報告・機能要望・お問い合わせなどができます。一部のアプリではサポートフォームへのリンクになっていますので、記載のリンクからお進みください。"
   },
   "page.support.header.app": {
     "en": "App",
     "ja": "アプリ"
   },
   "page.support.header.issues": {
-    "en": "Issue Tracker",
-    "ja": "Issue トラッカー"
+    "en": "Support URL",
+    "ja": "サポートURL"
   },
   "page.privacy.title": {
     "en": "Privacy Policy",
