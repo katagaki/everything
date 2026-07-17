@@ -295,6 +295,14 @@
     "en": "Password manager with a unique take on password generation",
     "ja": "独自のパスワード生成方式を採用したパスワードマネージャー"
   },
+  "app.overtrain.name": {
+    "en": "Overtrain",
+    "ja": "オーバートレイン"
+  },
+  "app.overtrain.desc": {
+    "en": "Real-time Kanto train journey tracker with Live Activity support",
+    "ja": "Live Activity対応のリアルタイム関東圏電車移動トラッカー"
+  },
   "others.blue_archive_macos.name": {
     "en": "Blue Archive for macOS",
     "ja": "macOS版ブルアカ"
