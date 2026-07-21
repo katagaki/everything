@@ -430,5 +430,13 @@
   "others.gists.desc": {
     "en": "Scripts, code snippets, and more",
     "ja": "スクリプト、コードスニペットなど"
+  },
+  "others.kraken.name": {
+    "en": "Kraken",
+    "ja": "Kraken"
+  },
+  "others.kraken.desc": {
+    "en": "Remotely controlled web browser with download management",
+    "ja": "ダウンロード管理機能付きのリモート操作型ウェブブラウザ"
   }
 }
