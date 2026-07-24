@@ -311,6 +311,14 @@
     "en": "Resources requires to run Blue Archive on a Mac",
     "ja": "Macでブルーアーカイブを動かすために必要なリソース"
   },
+  "others.blue_archive_birthdays.name": {
+    "en": "Blue Archive Birthday Calendar",
+    "ja": "ブルアカ誕生日カレンダー"
+  },
+  "others.blue_archive_birthdays.desc": {
+    "en": "Subscribable calendar of Blue Archive character birthdays",
+    "ja": "ブルーアーカイブのキャラクター誕生日を購読できるカレンダー"
+  },
   "others.rhythm_icons.name": {
     "en": "RhythMap Icons",
     "ja": "リズマップのアイコン"
