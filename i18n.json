@@ -55,6 +55,10 @@
     "en": "Personal Projects",
     "ja": "個人プロジェクト"
   },
+  "page.others.blue_archive": {
+    "en": "Blue Archive",
+    "ja": "ブルアカ関連"
+  },
   "page.others.contributions.apps": {
     "en": "iOS App Contributions",
     "ja": "他社iOSアプリ"
@@ -318,6 +322,14 @@
   "others.blue_archive_birthdays.desc": {
     "en": "Subscribable calendar of Blue Archive character birthdays",
     "ja": "ブルーアーカイブのキャラクター誕生日を購読できるカレンダー"
+  },
+  "others.blue_archive_gacha.name": {
+    "en": "Recruitment Simulator",
+    "ja": "募集チャージシミュレーター"
+  },
+  "others.blue_archive_gacha.desc": {
+    "en": "Simulator for planning Blue Archive recruitment pulls",
+    "ja": "ブルーアーカイブの募集を計画するためのシミュレーター"
   },
   "others.rhythm_icons.name": {
     "en": "RhythMap Icons",
