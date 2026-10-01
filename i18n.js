@@ -11,8 +11,8 @@ try {
 }
 
 export function applyTranslations(root = document) {
-  root.querySelectorAll("[i18n]").forEach((el) => {
-    const key = el.textContent.trim();
+  root.querySelectorAll("[i18n], [data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n") || el.textContent.trim();
     const entry = translations[key];
     if (!entry || !entry[lang]) return;
 
