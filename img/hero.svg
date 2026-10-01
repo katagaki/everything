@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Blue Archive blue abstract — katagaki's Homepage</title>
+  <desc id="desc">An abstract composition of intersecting paths and a pink rectangular halo inspired by Tendo Kei in a bright sky-blue palette, inspired by Blue Archive.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#eafaff"/>
+      <stop offset=".48" stop-color="#9be8f8"/>
+      <stop offset="1" stop-color="#48bdf1"/>
+    </linearGradient>
+    <linearGradient id="blueRibbon" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#43d9ef"/>
+      <stop offset=".52" stop-color="#20aeea"/>
+      <stop offset="1" stop-color="#2878dc"/>
+    </linearGradient>
+    <linearGradient id="cyanRibbon" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#a4f5f5"/>
+      <stop offset="1" stop-color="#50d6ec"/>
+    </linearGradient>
+    <linearGradient id="violetRibbon" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#b5cfff"/>
+      <stop offset="1" stop-color="#779ff1"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop stop-color="#fff" stop-opacity=".98"/>
+      <stop offset=".48" stop-color="#e6fcff" stop-opacity=".82"/>
+      <stop offset="1" stop-color="#8de5f8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="keiHalo" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ef8fbe"/>
+      <stop offset="100%" stop-color="#ffe0ef"/>
+    </linearGradient>
+    <linearGradient id="bottomLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity=".30"/>
+    </linearGradient>
+    <filter id="haloGlow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <filter id="haloBloom" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky)"/>
+  <circle cx="600" cy="315" r="390" fill="url(#halo)"/>
+  <path d="M-100 80L200-100l1100 720-300 180z" fill="url(#blueRibbon)" opacity=".96"/>
+  <path d="M60 630L580-40l150 112L210 700z" fill="url(#cyanRibbon)" opacity=".94"/>
+  <path d="M490 630L990-50l210 155-385 525z" fill="url(#violetRibbon)" opacity=".84"/>
+  <!-- Vector contours traced from the supplied HALO_ケイ.png reference. -->
+  <g id="kei-halo" transform="translate(355.7 67.9) scale(1.4)" fill-rule="evenodd">
+    <path fill="#fa8dc4" filter="url(#haloGlow)" opacity=".8" d="M150,93 L169,93 L169,220 L170,220 L170,221 L176,221 L176,197 L273,197 L273,221 L295,221 L295,220 L296,220 L296,191 L296,66 L219,66 L219,84 L172,84 L172,66 L141,66 L141,93 Z M313,212 L313,237 L312,237 L312,238 L273,238 L273,305 L177,305 L177,304 L176,304 L176,238 L169,238 L169,256 L37,256 L37,255 L36,255 L36,160 L36,93 L123,93 L123,92 L124,92 L124,49 L313,49 Z M124,162 L124,107 L123,107 L123,106 L50,106 L50,218 L50,242 L156,242 L156,238 L124,238 Z M231,221 L259,221 L259,211 L218,211 L190,211 L190,221 Z M141,186 L141,221 L155,221 L155,220 L156,220 L156,141 L156,107 L155,107 L155,106 L141,106 Z M201,238 L190,238 L190,291 L248,291 L259,291 L259,238 Z M80,69 L53,69 L53,79 L67,79 L94,79 L94,69 Z M103,85 L103,88 L44,88 L44,63 L44,60 L103,60 Z"/>
+    <path fill="#fff0fa" filter="url(#haloBloom)" opacity=".85" d="M150,93 L169,93 L169,220 L170,220 L170,221 L176,221 L176,197 L273,197 L273,221 L295,221 L295,220 L296,220 L296,191 L296,66 L219,66 L219,84 L172,84 L172,66 L141,66 L141,93 Z M313,212 L313,237 L312,237 L312,238 L273,238 L273,305 L177,305 L177,304 L176,304 L176,238 L169,238 L169,256 L37,256 L37,255 L36,255 L36,160 L36,93 L123,93 L123,92 L124,92 L124,49 L313,49 Z M124,162 L124,107 L123,107 L123,106 L50,106 L50,218 L50,242 L156,242 L156,238 L124,238 Z M231,221 L259,221 L259,211 L218,211 L190,211 L190,221 Z M141,186 L141,221 L155,221 L155,220 L156,220 L156,141 L156,107 L155,107 L155,106 L141,106 Z M201,238 L190,238 L190,291 L248,291 L259,291 L259,238 Z M80,69 L53,69 L53,79 L67,79 L94,79 L94,69 Z M103,85 L103,88 L44,88 L44,63 L44,60 L103,60 Z"/>
+    <path fill="url(#keiHalo)" d="M150,93 L169,93 L169,220 L170,220 L170,221 L176,221 L176,197 L273,197 L273,221 L295,221 L295,220 L296,220 L296,191 L296,66 L219,66 L219,84 L172,84 L172,66 L141,66 L141,93 Z M313,212 L313,237 L312,237 L312,238 L273,238 L273,305 L177,305 L177,304 L176,304 L176,238 L169,238 L169,256 L37,256 L37,255 L36,255 L36,160 L36,93 L123,93 L123,92 L124,92 L124,49 L313,49 Z M124,162 L124,107 L123,107 L123,106 L50,106 L50,218 L50,242 L156,242 L156,238 L124,238 Z M231,221 L259,221 L259,211 L218,211 L190,211 L190,221 Z M141,186 L141,221 L155,221 L155,220 L156,220 L156,141 L156,107 L155,107 L155,106 L141,106 Z M201,238 L190,238 L190,291 L248,291 L259,291 L259,238 Z M80,69 L53,69 L53,79 L67,79 L94,79 L94,69 Z M103,85 L103,88 L44,88 L44,63 L44,60 L103,60 Z"/>
+  </g>
+  <g id="corner-triangles" fill="#fff" transform="translate(-20 -18)">
+    <path d="M880.0 543.1 L894.0 543.1 L887.0 530.9 Z" opacity="0.12"/>
+    <path d="M933.0 487.2 L951.0 487.2 L942.0 502.8 Z" opacity="0.15"/>
+    <path d="M1011.0 457.9 L1027.0 457.9 L1019.0 444.1 Z" opacity="0.13"/>
+    <path d="M1098.0 418.9 L1112.0 418.9 L1105.0 431.1 Z" opacity="0.12"/>
+    <path d="M971.0 550.6 L995.0 550.6 L983.0 571.4 Z" opacity="0.18"/>
+    <path d="M1046.5 516.8 L1071.5 516.8 L1059.0 495.2 Z" opacity="0.19"/>
+    <path d="M1131.5 492.0 L1154.5 492.0 L1143.0 472.0 Z" opacity="0.16"/>
+    <path d="M1105.0 526.0 L1135.0 526.0 L1120.0 552.0 Z" opacity="0.23"/>
+    <path d="M922.5 608.1 L943.5 608.1 L933.0 589.9 Z" opacity="0.16"/>
+    <path d="M1026.0 586.1 L1058.0 586.1 L1042.0 613.9 Z" opacity="0.22"/>
+    <path d="M1079.5 591.6 L1108.5 591.6 L1094.0 566.4 Z" opacity="0.20"/>
+    <path d="M1150.5 536.8 L1185.5 536.8 L1168.0 567.2 Z" opacity="0.25"/>
+    <path d="M1144.0 614.2 L1186.0 614.2 L1165.0 577.8 Z" opacity="0.28"/>
+  </g>
+  <rect width="1200" height="630" fill="url(#bottomLight)"/>
+</svg>
