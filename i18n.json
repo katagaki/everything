@@ -454,5 +454,13 @@
   "others.kraken.desc": {
     "en": "Remotely controlled web browser with download management",
     "ja": "ダウンロード管理機能付きのリモート操作型ウェブブラウザ"
+  },
+  "others.x_simulator.name": {
+    "en": "X Simulator",
+    "ja": "Xシミュレーター"
+  },
+  "others.x_simulator.desc": {
+    "en": "Simulate how posts look on X",
+    "ja": "Xの投稿の見え方をシミュレート"
   }
 }
