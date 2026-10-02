@@ -1,7 +1,7 @@
 {
   "brand.name": {
-    "en": "katagaki",
-    "ja": "シン"
+    "en": "Homepage",
+    "ja": "ホームページ"
   },
   "nav.apps": {
     "en": "Apps",
@@ -20,8 +20,8 @@
     "ja": "プライバシー（英語）"
   },
   "page.apps.title": {
-    "en": "katagaki's Homepage",
-    "ja": "シンのホームページ"
+    "en": "Homepage",
+    "ja": "ホームページ"
   },
   "page.apps.heading": {
     "en": "Apps",
