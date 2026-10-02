@@ -97,20 +97,6 @@ body {
   z-index: 100;
 }
 
-.ktui-header-brand {
-  display: inline-flex;
-  align-items: center;
-  height: 100%;
-  padding: 0 16px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: 0.16px;
-  color: var(--ktui-header-text);
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-}
-
 .ktui-header-nav {
   display: flex;
   align-items: center;
@@ -552,9 +538,6 @@ a:hover .ktui-playstore-badge {
   }
   .ktui-shell {
     padding: 32px 16px 64px;
-  }
-  .ktui-header-brand {
-    display: none;
   }
   .ktui-nav-link {
     font-size: 0;
