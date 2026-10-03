@@ -959,6 +959,9 @@ a.ktui-app-menu-item:focus-visible::after {
   .ktui-group {
     padding: 16px 8px 20px;
   }
+  .ktui-group:has(> .ktui-list) {
+    padding-bottom: 8px;
+  }
   .ktui-group h3 {
     margin: 0 0 16px 8px;
   }
