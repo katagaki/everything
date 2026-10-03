@@ -62,8 +62,35 @@
   }
 }
 
+/* Hidden until i18n.js swaps in Japanese text. The delayed reveal is a
+   fallback in case the script never runs. */
+.i18n-pending body {
+  visibility: hidden;
+  animation: i18n-reveal 0s 2s forwards;
+}
+
+@keyframes i18n-reveal {
+  to {
+    visibility: visible;
+  }
+}
+
 * {
   box-sizing: border-box;
+}
+
+/* No text selection, long-press callouts, or image dragging anywhere. */
+*,
+*::before,
+*::after {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+img,
+a {
+  -webkit-user-drag: none;
 }
 
 html, body {
@@ -81,8 +108,6 @@ body {
   background-color: var(--ktui-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  user-select: none;
-  -webkit-user-select: none;
 }
 
 .ktui-header {
@@ -130,39 +155,9 @@ body {
   border-bottom-color: transparent;
 }
 
-.ktui-nav-link:focus {
+.ktui-nav-link:focus-visible {
   outline: 2px solid var(--ktui-focus);
   outline-offset: -2px;
-}
-
-.ktui-nav-link::before {
-  content: "";
-  display: none;
-  width: 20px;
-  height: 20px;
-  background-color: currentColor;
-  -webkit-mask: no-repeat center / contain;
-  mask: no-repeat center / contain;
-}
-
-.ktui-nav-link[data-icon="apps"]::before {
-  -webkit-mask-image: url("img/ui/apps.svg");
-  mask-image: url("img/ui/apps.svg");
-}
-
-.ktui-nav-link[data-icon="others"]::before {
-  -webkit-mask-image: url("img/ui/others.svg");
-  mask-image: url("img/ui/others.svg");
-}
-
-.ktui-nav-link[data-icon="support"]::before {
-  -webkit-mask-image: url("img/ui/support.svg");
-  mask-image: url("img/ui/support.svg");
-}
-
-.ktui-nav-link[data-icon="privacy"]::before {
-  -webkit-mask-image: url("img/ui/privacy.svg");
-  mask-image: url("img/ui/privacy.svg");
 }
 
 .ktui-shell {
@@ -216,68 +211,6 @@ h3 {
   margin-bottom: 8px;
 }
 
-.ktui-table-wrapper {
-  background-color: var(--ktui-layer-02);
-  border: 1px solid var(--ktui-border-subtle);
-  overflow-x: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: var(--ktui-layer-02);
-  font-size: 14px;
-  line-height: 1.2857;
-  letter-spacing: 0.16px;
-}
-
-thead {
-  background-color: var(--ktui-layer-01);
-}
-
-th {
-  text-align: left;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.2857;
-  letter-spacing: 0.16px;
-  color: var(--ktui-text-primary);
-  padding: 8px 12px;
-  border-bottom: 1px solid var(--ktui-border-subtle);
-  background-color: var(--ktui-layer-01);
-  height: 36px;
-  vertical-align: middle;
-}
-
-td {
-  padding: 10px 12px;
-  border-bottom: 1px solid var(--ktui-border-subtle);
-  vertical-align: middle;
-  color: var(--ktui-text-secondary);
-}
-
-tbody tr {
-  transition: background-color 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
-}
-
-tbody tr:hover {
-  background-color: var(--ktui-layer-hover);
-}
-
-tbody tr:last-child td {
-  border-bottom: none;
-}
-
-td.center, th.center {
-  text-align: center;
-  width: 64px;
-}
-
-td strong {
-  color: var(--ktui-text-primary);
-  font-weight: 600;
-}
-
 img {
   vertical-align: middle;
   display: inline-block;
@@ -302,7 +235,7 @@ a:hover {
   border-bottom-color: var(--ktui-link-primary-hover);
 }
 
-a:focus {
+a:focus-visible {
   outline: 2px solid var(--ktui-focus);
   outline-offset: 2px;
 }
@@ -359,14 +292,6 @@ code {
   letter-spacing: 0.32px;
   color: var(--ktui-text-helper);
   margin-top: 4px;
-}
-
-.ktui-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1px;
-  background-color: var(--ktui-border-subtle);
-  border: 1px solid var(--ktui-border-subtle);
 }
 
 .ktui-card {
@@ -429,6 +354,631 @@ code {
   max-width: 100%;
 }
 
+/* Grouped list, like an inset table in iOS Settings. In rows without a store
+   badge, the title link is stretched over the whole row so the row is the
+   click target. Rows with a badge leave the badge as the main action. */
+.ktui-list {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--ktui-layer-02);
+  border: 1px solid var(--ktui-border-subtle);
+}
+
+.ktui-list .ktui-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  grid-template-areas:
+    "icon name action"
+    "icon desc action";
+  column-gap: 14px;
+  row-gap: 2px;
+  align-items: center;
+  min-height: 64px;
+  padding: 10px 16px;
+  background: none;
+  transition: background-color 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+
+.ktui-list .ktui-card + .ktui-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 70px;
+  right: 0;
+  height: 1px;
+  background-color: var(--ktui-border-subtle);
+}
+
+.ktui-list .ktui-card:has(.ktui-card-name a):not(:has(.ktui-appstore-badge)):hover {
+  background-color: var(--ktui-layer-hover);
+}
+
+.ktui-list .ktui-card:not(:has(.ktui-appstore-badge)):has(.ktui-card-name a:focus-visible) {
+  outline: 2px solid var(--ktui-focus);
+  outline-offset: -2px;
+}
+
+.ktui-list .ktui-card-icon,
+.ktui-list .ktui-card-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.ktui-list .ktui-card-icon {
+  grid-area: icon;
+}
+
+.ktui-list .ktui-card-icon img {
+  border-radius: 22.5%;
+}
+
+.ktui-list .ktui-card-name {
+  grid-area: name;
+  align-self: end;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.ktui-list .ktui-card:not(:has(.ktui-appstore-badge)) .ktui-card-name a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.ktui-list .ktui-card:not(:has(.ktui-appstore-badge)) .ktui-card-name a:hover {
+  color: inherit;
+}
+
+.ktui-list .ktui-card:not(:has(.ktui-appstore-badge)) .ktui-card-name a:focus-visible {
+  outline: none;
+}
+
+.ktui-list .ktui-card-desc {
+  grid-area: desc;
+  align-self: start;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.ktui-list .ktui-card:not(:has(.ktui-card-desc)) .ktui-card-name {
+  grid-row: 1 / span 2;
+  align-self: center;
+}
+
+.ktui-list .ktui-card-action {
+  grid-area: action;
+  position: relative;
+  z-index: 1;
+  min-height: 0;
+  margin: 0;
+}
+
+.ktui-list .ktui-appstore-badge {
+  height: 32px;
+}
+
+/* Rows with a link but no badge get a disclosure chevron. */
+.ktui-list .ktui-card:has(.ktui-card-name a) .ktui-card-action:empty::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-right: 4px;
+  border-top: 2px solid var(--ktui-text-helper);
+  border-right: 2px solid var(--ktui-text-helper);
+  transform: rotate(45deg);
+}
+
+/* Wallpaper and floating tab bar, used on every page */
+
+.ktui-wallpaper {
+  --ktui-home-label: #ffffff;
+  --ktui-home-label-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --ktui-sheet-bg: rgba(255, 255, 255, 0.78);
+  --ktui-sheet-border: rgba(255, 255, 255, 0.6);
+  background-color: #3f8fe6;
+  background-image:
+    linear-gradient(155deg, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, 0.16) 38%, rgba(255, 255, 255, 0.16) 58%, rgba(255, 255, 255, 0) 58%),
+    linear-gradient(30deg, rgba(126, 96, 230, 0) 52%, rgba(126, 96, 230, 0.35) 52%),
+    linear-gradient(160deg, #36c4ec 0%, #3f8fe6 50%, #6f74e4 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ktui-wallpaper {
+    --ktui-sheet-bg: rgba(38, 38, 42, 0.78);
+    --ktui-sheet-border: rgba(255, 255, 255, 0.1);
+    background-color: #102a5c;
+    background-image:
+      linear-gradient(155deg, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, 0.05) 38%, rgba(255, 255, 255, 0.05) 58%, rgba(255, 255, 255, 0) 58%),
+      linear-gradient(30deg, rgba(76, 40, 140, 0) 52%, rgba(76, 40, 140, 0.45) 52%),
+      linear-gradient(160deg, #0c4a6e 0%, #102a5c 50%, #2a1f5c 100%);
+  }
+}
+
+/* The header becomes a floating tab bar. */
+.ktui-wallpaper .ktui-header {
+  height: 64px;
+  justify-content: center;
+  background: none;
+  border-bottom: none;
+  pointer-events: none;
+}
+
+.ktui-wallpaper .ktui-header-nav {
+  border-radius: 999px;
+  flex: none;
+  height: 44px;
+  padding: 5px;
+  gap: 2px;
+  background-color: rgba(120, 160, 230, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  backdrop-filter: blur(30px) saturate(180%);
+  pointer-events: auto;
+}
+
+.ktui-wallpaper .ktui-nav-spacer {
+  flex: none;
+  width: 1px;
+  height: 20px;
+  margin: 0 6px;
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.ktui-wallpaper .ktui-nav-link {
+  border-radius: 999px;
+  height: 32px;
+  padding: 0 16px;
+  border-bottom: none;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.ktui-wallpaper .ktui-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.ktui-wallpaper .ktui-nav-link[aria-current="page"] {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ktui-wallpaper .ktui-header-nav {
+    background-color: rgba(30, 30, 40, 0.6);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+  .ktui-wallpaper .ktui-nav-link[aria-current="page"] {
+    background-color: rgba(255, 255, 255, 0.18);
+  }
+}
+
+/* Text pages float in a frosted-glass window over the wallpaper. */
+.ktui-panel {
+  padding: 40px;
+}
+
+/* Page titles inside a panel match the section headers. */
+.ktui-panel h1 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 0 0 12px;
+}
+
+/* Apps page: home screen of app icons */
+
+.ktui-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Each category is a frosted group. */
+.ktui-group {
+  padding: 20px 20px 28px;
+}
+
+.ktui-group + .ktui-group {
+  margin-top: 20px;
+}
+
+/* Groups holding only text get even padding on every side. */
+.ktui-group-text {
+  padding: 20px;
+}
+
+/* Groups and content panels share one frosted surface over the wallpaper.
+   Text, link, and layer tokens switch to light-on-glass values so lists
+   and prose inside pick them up. */
+.ktui-group,
+.ktui-panel {
+  --ktui-text-primary: #ffffff;
+  --ktui-text-secondary: rgba(255, 255, 255, 0.8);
+  --ktui-text-helper: rgba(255, 255, 255, 0.6);
+  --ktui-link-primary: #ffffff;
+  --ktui-link-primary-hover: #ffffff;
+  --ktui-focus: #ffffff;
+  --ktui-layer-01: rgba(255, 255, 255, 0.08);
+  --ktui-layer-02: rgba(255, 255, 255, 0.06);
+  --ktui-layer-hover: rgba(255, 255, 255, 0.12);
+  --ktui-border-subtle: rgba(255, 255, 255, 0.16);
+  color: var(--ktui-text-primary);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(10, 30, 80, 0.24);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  backdrop-filter: blur(24px) saturate(160%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .ktui-group,
+  .ktui-panel {
+    border-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.ktui-panel {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Text links on the glass are white, so an underline marks them as links. */
+.ktui-group .ktui-prose a,
+.ktui-panel .ktui-prose a {
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+.ktui-group .ktui-prose a:hover,
+.ktui-panel .ktui-prose a:hover {
+  border-bottom-color: #ffffff;
+}
+
+/* Line-art glyph icons are drawn dark, so they're inverted on the glass. */
+.ktui-group img[src*="img/ui/"],
+.ktui-panel img[src*="img/ui/"] {
+  filter: invert(1);
+}
+
+.ktui-group h3 {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #ffffff;
+  text-shadow: var(--ktui-home-label-shadow);
+  margin: 0 0 20px 4px;
+}
+
+.ktui-group-archived {
+  background-color: rgba(10, 30, 80, 0.14);
+}
+
+@media (prefers-color-scheme: dark) {
+  .ktui-group-archived {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+}
+
+.ktui-group-archived h3 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ktui-springboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+  gap: 12px 8px;
+}
+
+.ktui-springboard .ktui-card {
+  background: none;
+  gap: 8px;
+  min-height: 0;
+  align-items: center;
+  padding: 8px 4px;
+  border-radius: 12px;
+  cursor: default;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ktui-springboard .ktui-card:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+.ktui-springboard .ktui-card-icon,
+.ktui-springboard .ktui-card-icon img {
+  width: 76px;
+  height: 76px;
+}
+
+.ktui-springboard .ktui-card-icon img {
+  border-radius: 22.5%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: filter 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+
+.ktui-springboard .ktui-card:active .ktui-card-icon img {
+  filter: brightness(0.75);
+}
+
+.ktui-springboard .ktui-card-name {
+  max-width: 100%;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: center;
+  color: var(--ktui-home-label);
+  text-shadow: var(--ktui-home-label-shadow);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ktui-springboard .ktui-card-name a,
+.ktui-springboard .ktui-card-name a:hover {
+  color: inherit;
+}
+
+/* Beta and in-development apps get a dot before their label, like TestFlight
+   and freshly installed apps on the home screen. */
+.ktui-springboard .ktui-card:has(.ktui-tag) .ktui-card-name::before,
+.ktui-springboard .ktui-card:has(.ktui-button) .ktui-card-name::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: #0a84ff;
+  vertical-align: 0.05em;
+}
+
+.ktui-springboard .ktui-card:has(.ktui-button) .ktui-card-name::before {
+  background-color: #ff9f0a;
+}
+
+.ktui-springboard .ktui-card-desc,
+.ktui-springboard .ktui-card-action {
+  display: none;
+}
+
+/* Support page: each tile is a plain link to that app's support URL. */
+.ktui-springboard-links .ktui-card {
+  position: relative;
+}
+
+.ktui-springboard-links .ktui-card-name a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.ktui-springboard-links .ktui-card-name a:focus-visible {
+  outline: none;
+}
+
+.ktui-springboard-links .ktui-card:has(.ktui-card-name a:focus-visible) {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* Context menu anchored to the selected app's icon (larger screens). */
+.ktui-app-menu {
+  inset: auto;
+  margin: 0;
+  width: 284px;
+  padding: 6px;
+  border: 1px solid var(--ktui-sheet-border);
+  border-radius: 14px;
+  color: var(--ktui-text-primary);
+  background-color: var(--ktui-sheet-bg);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  backdrop-filter: blur(40px) saturate(180%);
+}
+
+.ktui-app-menu:popover-open {
+  animation: ktui-menu-in 140ms cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+
+@keyframes ktui-menu-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+.ktui-app-menu-desc {
+  margin: 0;
+  padding: 8px 10px 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--ktui-text-secondary);
+  border-bottom: 1px solid var(--ktui-border-subtle);
+}
+
+.ktui-app-menu-items {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6px;
+}
+
+.ktui-app-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  border-bottom: none;
+  font-size: 14px;
+  color: var(--ktui-text-primary);
+  cursor: default;
+}
+
+a.ktui-app-menu-item::after {
+  content: "\2197";
+  font-size: 12px;
+  color: var(--ktui-text-helper);
+}
+
+a.ktui-app-menu-item:hover,
+a.ktui-app-menu-item:focus-visible {
+  color: #ffffff;
+  background-color: var(--ktui-link-primary);
+  border-bottom: none;
+  outline: none;
+}
+
+a.ktui-app-menu-item:hover::after,
+a.ktui-app-menu-item:focus-visible::after {
+  color: inherit;
+}
+
+.ktui-app-menu-item[aria-disabled="true"] {
+  color: var(--ktui-text-helper);
+}
+
+/* Modal sheet with the app's details (phones). */
+.ktui-app-sheet {
+  width: min(400px, calc(100vw - 32px));
+  padding: 20px;
+  border: 1px solid var(--ktui-sheet-border);
+  border-radius: 16px;
+  color: var(--ktui-text-primary);
+  background-color: var(--ktui-sheet-bg);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  backdrop-filter: blur(40px) saturate(180%);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
+}
+
+.ktui-app-sheet[open] {
+  animation: ktui-sheet-in 240ms cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+
+.ktui-app-sheet::backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+@keyframes ktui-sheet-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ktui-app-menu:popover-open,
+  .ktui-app-sheet[open] {
+    animation: none;
+  }
+}
+
+.ktui-app-sheet-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ktui-app-sheet-header img {
+  width: 64px;
+  height: 64px;
+  border-radius: 22.5%;
+  flex-shrink: 0;
+}
+
+.ktui-app-sheet-name {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.ktui-app-sheet-desc {
+  font-size: 14px;
+  line-height: 1.4286;
+  color: var(--ktui-text-secondary);
+  margin: 4px 0 0;
+}
+
+.ktui-app-sheet-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.ktui-app-sheet-sources {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.ktui-springboard .ktui-app-sheet-actions .ktui-card-action,
+.ktui-app-sheet-actions .ktui-card-action {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  min-height: 0;
+  margin: 0;
+}
+
+.ktui-app-sheet-actions .ktui-card-action:empty {
+  display: none;
+}
+
+.ktui-app-sheet-actions .ktui-button,
+.ktui-app-sheet-actions .ktui-tag {
+  border-radius: 8px;
+}
+
+@media (max-width: 640px) {
+  .ktui-panel {
+    padding: 24px 20px;
+  }
+  .ktui-wallpaper .ktui-nav-link {
+    padding: 0 10px;
+    font-size: 13px;
+  }
+  .ktui-group {
+    padding: 16px 8px 20px;
+  }
+  .ktui-group h3 {
+    margin: 0 0 16px 8px;
+  }
+  .ktui-group-text {
+    padding: 16px;
+  }
+  .ktui-springboard {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px 4px;
+  }
+  .ktui-springboard .ktui-card-icon,
+  .ktui-springboard .ktui-card-icon img {
+    width: 60px;
+    height: 60px;
+  }
+  .ktui-springboard .ktui-card-name {
+    font-size: 12px;
+  }
+}
+
 .ktui-button {
   display: inline-flex;
   align-items: center;
@@ -454,7 +1004,7 @@ code {
   border-bottom-color: transparent;
 }
 
-.ktui-button:focus {
+.ktui-button:focus-visible {
   outline: 2px solid var(--ktui-focus);
   outline-offset: -2px;
   border-bottom-color: transparent;
@@ -465,7 +1015,6 @@ code {
   line-height: 1.5;
   letter-spacing: 0;
   color: var(--ktui-text-secondary);
-  max-width: 640px;
   margin: 0 0 16px;
 }
 
@@ -532,20 +1081,22 @@ a:hover .ktui-playstore-badge {
   opacity: 0.85;
 }
 
+/* Only plain text links get the hand cursor. Everything else that's
+   interactive (tab bar, app tiles, card titles, badges, buttons) signals
+   itself with a hover state instead. */
+.ktui-nav-link,
+.ktui-card-name a,
+.ktui-button,
+a:has(.ktui-appstore-badge),
+a:has(.ktui-playstore-badge) {
+  cursor: default;
+}
+
 @media (max-width: 640px) {
   h1 {
     font-size: 32px;
   }
   .ktui-shell {
     padding: 32px 16px 64px;
-  }
-  .ktui-nav-link {
-    font-size: 0;
-    padding: 0;
-    width: 48px;
-    justify-content: center;
-  }
-  .ktui-nav-link::before {
-    display: inline-block;
   }
 }

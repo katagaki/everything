@@ -72,16 +72,8 @@
     "ja": "サポート"
   },
   "page.support.intro": {
-    "en": "For help with any of the apps, use the <strong>Support URL</strong> listed below. For most apps this opens a new issue in the corresponding GitHub repository where you can file a bug report, request a feature, or ask a question. Some apps instead link to a feedback form.",
-    "ja": "アプリのサポートが必要な場合、下記の<strong>サポートURL</strong>をご利用ください。多くのアプリでは該当するGitHubリポジトリのIssueが開き、バグ報告・機能要望・お問い合わせなどができます。一部のアプリではフィードバックフォームへのリンクになっていますので、記載のリンクからお進みください。"
-  },
-  "page.support.header.app": {
-    "en": "App",
-    "ja": "アプリ"
-  },
-  "page.support.header.issues": {
-    "en": "Support URL",
-    "ja": "サポートURL"
+    "en": "Select the app you need support with.",
+    "ja": "サポートが必要なアプリを選択してください。"
   },
   "page.privacy.title": {
     "en": "Privacy Policy",
@@ -102,6 +94,30 @@
   "tag.join_beta": {
     "en": "Join Beta",
     "ja": "ベータ版に参加"
+  },
+  "app.view_source": {
+    "en": "View on GitHub",
+    "ja": "GitHubで見る"
+  },
+  "app.view_source_ios": {
+    "en": "View iOS Source on GitHub",
+    "ja": "iOS版のソースをGitHubで見る"
+  },
+  "app.view_source_android": {
+    "en": "View Android Source on GitHub",
+    "ja": "Android版のソースをGitHubで見る"
+  },
+  "app.view_app_store": {
+    "en": "View on the App Store",
+    "ja": "App Storeで見る"
+  },
+  "app.view_google_play": {
+    "en": "View on Google Play",
+    "ja": "Google Playで見る"
+  },
+  "app.circles.name": {
+    "en": "CiRCLES",
+    "ja": "サークルズ"
   },
   "app.circles_ios.name": {
     "en": "CiRCLES for iOS",
