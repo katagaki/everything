@@ -25,7 +25,7 @@
   },
   "page.apps.multimedia": {
     "en": "Multimedia Apps",
-    "ja": "メディア関連アプリ"
+    "ja": "メディア関連"
   },
   "page.apps.productivity": {
     "en": "Productivity",
@@ -33,11 +33,11 @@
   },
   "page.apps.others": {
     "en": "Other Apps",
-    "ja": "その他のアプリ"
+    "ja": "その他"
   },
   "page.apps.circles": {
     "en": "Apps for Circles",
-    "ja": "サークル支援アプリ"
+    "ja": "同人活動"
   },
   "page.apps.archived": {
     "en": "Archived",
