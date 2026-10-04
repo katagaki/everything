@@ -319,6 +319,18 @@
     "en": "Real-time Kanto train journey tracker with Live Activity support",
     "ja": "Live Activity対応のリアルタイム関東圏電車移動トラッカー"
   },
+  "app.plates.name": {
+    "en": "Plates",
+    "ja": "Plates"
+  },
+  "app.fundsee.name": {
+    "en": "Fundsee",
+    "ja": "Fundsee"
+  },
+  "app.tables.name": {
+    "en": "Tables",
+    "ja": "Tables"
+  },
   "others.blue_archive_macos.name": {
     "en": "Blue Archive for macOS",
     "ja": "macOS版ブルアカ"
