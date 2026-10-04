@@ -27,6 +27,10 @@
     "en": "Multimedia Apps",
     "ja": "メディア関連アプリ"
   },
+  "page.apps.productivity": {
+    "en": "Productivity",
+    "ja": "仕事効率化"
+  },
   "page.apps.others": {
     "en": "Other Apps",
     "ja": "その他のアプリ"
@@ -323,13 +327,33 @@
     "en": "Plates",
     "ja": "Plates"
   },
+  "app.plates.desc": {
+    "en": "Recipe manager with Apple Intelligence",
+    "ja": "Apple Intelligence対応のレシピ管理アプリ"
+  },
+  "app.powerview.name": {
+    "en": "PowerView",
+    "ja": "PowerView"
+  },
+  "app.powerview.desc": {
+    "en": "Battery and power usage viewer for sysdiagnose power logs",
+    "ja": "sysdiagnoseの電源ログからバッテリーと電力使用量を確認できるアプリ"
+  },
   "app.fundsee.name": {
     "en": "Fundsee",
     "ja": "Fundsee"
   },
+  "app.fundsee.desc": {
+    "en": "Visual daily budget tracker with spending charts",
+    "ja": "支出グラフで見る日別予算管理アプリ"
+  },
   "app.tables.name": {
     "en": "Tables",
     "ja": "Tables"
+  },
+  "app.tables.desc": {
+    "en": "Spreadsheet editor with Excel file support",
+    "ja": "Excelファイル対応のスプレッドシートエディタ"
   },
   "others.blue_archive_macos.name": {
     "en": "Blue Archive for macOS",
