@@ -830,6 +830,18 @@ a.ktui-app-menu-item:focus-visible::after {
   color: var(--ktui-text-helper);
 }
 
+.ktui-app-menu-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.ktui-app-menu-heading {
+  padding: 10px 10px 2px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ktui-text-helper);
+}
+
 /* Modal sheet with the app's details (phones). */
 .ktui-app-sheet {
   width: min(400px, calc(100vw - 32px));
@@ -907,6 +919,12 @@ a.ktui-app-menu-item:focus-visible::after {
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
+}
+
+.ktui-app-sheet-source-heading {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ktui-text-helper);
 }
 
 .ktui-springboard .ktui-app-sheet-actions .ktui-card-action,

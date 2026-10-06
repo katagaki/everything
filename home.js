@@ -45,14 +45,29 @@ function primaryItems(action) {
   return items;
 }
 
-// Apps built separately per platform link both repositories.
-function sourceItems(card, link) {
-  const android = card.dataset.androidSource;
-  if (!android) return [{ href: link.href, key: "app.view_source", text: "View on GitHub" }];
-  return [
-    { href: link.href, key: "app.view_source_ios", text: "View iOS Source on GitHub" },
-    { href: android, key: "app.view_source_android", text: "View Android Source on GitHub" },
-  ];
+// Apps with an Android version or server component keep each in its own
+// repository, so their links are listed by component under one heading.
+function sources(card, link) {
+  const { androidSource, serverSource } = card.dataset;
+  if (!androidSource && !serverSource) {
+    return { items: [{ href: link.href, key: "app.view_source", text: "View on GitHub" }] };
+  }
+  return {
+    items: [
+      { href: link.href, key: "app.source_ios", text: "iOS" },
+      { href: androidSource, key: "app.source_android", text: "Android" },
+      { href: serverSource, key: "app.source_server", text: "Server" },
+    ].filter(({ href }) => href),
+    grouped: true,
+  };
+}
+
+function sourceHeading(className) {
+  const heading = document.createElement("span");
+  heading.className = className;
+  heading.setAttribute("data-i18n", "app.source_code");
+  heading.textContent = "Source Code";
+  return heading;
 }
 
 function menuItem({ href, key, text }) {
@@ -83,17 +98,19 @@ function openSheet(card) {
   sheet.querySelector(".ktui-app-sheet-name").textContent = link.textContent;
   sheet.querySelector(".ktui-app-sheet-desc").innerHTML = desc.innerHTML;
   const actions = sheet.querySelector(".ktui-app-sheet-actions");
-  const sources = document.createElement("div");
-  sources.className = "ktui-app-sheet-sources";
-  for (const { href, key, text } of sourceItems(card, link)) {
+  const sourceLinks = document.createElement("div");
+  sourceLinks.className = "ktui-app-sheet-sources";
+  const { items, grouped } = sources(card, link);
+  if (grouped) sourceLinks.append(sourceHeading("ktui-app-sheet-source-heading"));
+  for (const { href, key, text } of items) {
     const source = document.createElement("a");
     source.className = "ktui-app-sheet-source";
     source.href = href;
     source.setAttribute("data-i18n", key);
     source.textContent = text;
-    sources.append(source);
+    sourceLinks.append(source);
   }
-  actions.append(action.cloneNode(true), sources);
+  actions.append(action.cloneNode(true), sourceLinks);
   applyTranslations(sheet);
 
   sheet.showModal();
@@ -129,8 +146,19 @@ function openMenu(card) {
   menu.innerHTML = `<p class="ktui-app-menu-desc"></p><div class="ktui-app-menu-items"></div>`;
   menu.querySelector(".ktui-app-menu-desc").innerHTML = desc.innerHTML;
   const items = menu.querySelector(".ktui-app-menu-items");
-  for (const item of [...primaryItems(action), ...sourceItems(card, link)]) {
-    items.append(menuItem(item));
+  for (const item of primaryItems(action)) items.append(menuItem(item));
+  const { items: sourceItems, grouped } = sources(card, link);
+  if (grouped) {
+    const group = document.createElement("div");
+    group.className = "ktui-app-menu-group";
+    group.setAttribute("role", "group");
+    const label = sourceHeading("ktui-app-menu-heading");
+    label.id = "ktui-app-menu-source-heading";
+    group.setAttribute("aria-labelledby", label.id);
+    group.append(label, ...sourceItems.map(menuItem));
+    items.append(group);
+  } else {
+    for (const item of sourceItems) items.append(menuItem(item));
   }
   menu.setAttribute("aria-label", link.textContent);
   applyTranslations(menu);

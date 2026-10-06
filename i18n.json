@@ -103,13 +103,21 @@
     "en": "View on GitHub",
     "ja": "GitHubで見る"
   },
-  "app.view_source_ios": {
-    "en": "View iOS Source on GitHub",
-    "ja": "iOS版のソースをGitHubで見る"
+  "app.source_code": {
+    "en": "Source Code",
+    "ja": "ソースコード"
   },
-  "app.view_source_android": {
-    "en": "View Android Source on GitHub",
-    "ja": "Android版のソースをGitHubで見る"
+  "app.source_ios": {
+    "en": "iOS",
+    "ja": "iOS"
+  },
+  "app.source_android": {
+    "en": "Android",
+    "ja": "Android"
+  },
+  "app.source_server": {
+    "en": "Server",
+    "ja": "サーバー"
   },
   "app.view_app_store": {
     "en": "View on the App Store",
