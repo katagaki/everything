@@ -6,17 +6,11 @@
   --ktui-layer-02: #ffffff;
   --ktui-layer-hover: #e8e8e8;
   --ktui-border-subtle: #e0e0e0;
-  --ktui-border-strong: #8d8d8d;
   --ktui-text-primary: #161616;
   --ktui-text-secondary: #525252;
   --ktui-text-helper: #6f6f6f;
-  --ktui-text-on-color: #ffffff;
   --ktui-link-primary: #0f62fe;
   --ktui-link-primary-hover: #0043ce;
-  --ktui-link-visited: #8a3ffc;
-  --ktui-support-info: #0043ce;
-  --ktui-icon-primary: #161616;
-  --ktui-focus: #0f62fe;
   --ktui-header-bg: #161616;
   --ktui-header-border: #393939;
   --ktui-header-text: #f4f4f4;
@@ -37,17 +31,11 @@
     --ktui-layer-02: #161616;
     --ktui-layer-hover: #353535;
     --ktui-border-subtle: #393939;
-    --ktui-border-strong: #6f6f6f;
     --ktui-text-primary: #f4f4f4;
     --ktui-text-secondary: #c6c6c6;
     --ktui-text-helper: #8d8d8d;
-    --ktui-text-on-color: #ffffff;
     --ktui-link-primary: #78a9ff;
     --ktui-link-primary-hover: #a6c8ff;
-    --ktui-link-visited: #be95ff;
-    --ktui-support-info: #4589ff;
-    --ktui-icon-primary: #f4f4f4;
-    --ktui-focus: #ffffff;
     --ktui-header-bg: #000000;
     --ktui-header-border: #393939;
     --ktui-header-text: #f4f4f4;
@@ -156,8 +144,7 @@ body {
 }
 
 .ktui-nav-link:focus-visible {
-  outline: 2px solid var(--ktui-focus);
-  outline-offset: -2px;
+  outline: none;
 }
 
 .ktui-shell {
@@ -236,8 +223,7 @@ a:hover {
 }
 
 a:focus-visible {
-  outline: 2px solid var(--ktui-focus);
-  outline-offset: 2px;
+  outline: none;
 }
 
 hr {
@@ -394,11 +380,6 @@ code {
 
 .ktui-list .ktui-card:has(.ktui-card-name a):not(:has(.ktui-appstore-badge)):hover {
   background-color: var(--ktui-layer-hover);
-}
-
-.ktui-list .ktui-card:not(:has(.ktui-appstore-badge)):has(.ktui-card-name a:focus-visible) {
-  outline: 2px solid var(--ktui-focus);
-  outline-offset: -2px;
 }
 
 .ktui-list .ktui-card-icon,
@@ -613,7 +594,6 @@ code {
   --ktui-text-helper: rgba(255, 255, 255, 0.6);
   --ktui-link-primary: #ffffff;
   --ktui-link-primary-hover: #ffffff;
-  --ktui-focus: #ffffff;
   --ktui-layer-01: rgba(255, 255, 255, 0.08);
   --ktui-layer-02: rgba(255, 255, 255, 0.06);
   --ktui-layer-hover: rgba(255, 255, 255, 0.12);
@@ -698,8 +678,7 @@ code {
 }
 
 .ktui-springboard .ktui-card:focus-visible {
-  outline: 2px solid #ffffff;
-  outline-offset: 4px;
+  outline: none;
 }
 
 .ktui-springboard .ktui-card-icon,
@@ -772,11 +751,6 @@ code {
 
 .ktui-springboard-links .ktui-card-name a:focus-visible {
   outline: none;
-}
-
-.ktui-springboard-links .ktui-card:has(.ktui-card-name a:focus-visible) {
-  outline: 2px solid #ffffff;
-  outline-offset: 4px;
 }
 
 /* Context menu anchored to the selected app's icon (larger screens). */
@@ -1013,8 +987,7 @@ a.ktui-app-menu-item:focus-visible::after {
 }
 
 .ktui-button:focus-visible {
-  outline: 2px solid var(--ktui-focus);
-  outline-offset: -2px;
+  outline: none;
   border-bottom-color: transparent;
 }
 
