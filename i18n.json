@@ -363,6 +363,30 @@
     "en": "Spreadsheet editor with Excel file support",
     "ja": "Excelファイル対応のスプレッドシートエディタ"
   },
+  "app.libretto.name": {
+    "en": "Libretto",
+    "ja": "Libretto"
+  },
+  "app.libretto.desc": {
+    "en": "Word processor with Word document and Markdown support",
+    "ja": "Word文書とMarkdown対応のワープロアプリ"
+  },
+  "app.dazzle.name": {
+    "en": "Dazzle",
+    "ja": "Dazzle"
+  },
+  "app.dazzle.desc": {
+    "en": "Presentation editor with PowerPoint file support",
+    "ja": "PowerPointファイル対応のプレゼンテーションエディタ"
+  },
+  "app.easel.name": {
+    "en": "Easel",
+    "ja": "Easel"
+  },
+  "app.easel.desc": {
+    "en": "Drawing app with layers and Apple Pencil support",
+    "ja": "レイヤーとApple Pencil対応のお絵かきアプリ"
+  },
   "others.blue_archive_macos.name": {
     "en": "Blue Archive for macOS",
     "ja": "macOS版ブルアカ"
