@@ -387,6 +387,14 @@
     "en": "Drawing app with layers and Apple Pencil support",
     "ja": "レイヤーとApple Pencil対応のお絵かきアプリ"
   },
+  "app.workers.name": {
+    "en": "Workers",
+    "ja": "Workers"
+  },
+  "app.workers.desc": {
+    "en": "Cloudflare Workers, domains, and DNS manager",
+    "ja": "Cloudflare Workers・ドメイン・DNS管理アプリ"
+  },
   "others.blue_archive_macos.name": {
     "en": "Blue Archive for macOS",
     "ja": "macOS版ブルアカ"
